@@ -183,3 +183,16 @@ background-color: #818181
 	border: 1px solid #7fbed5;
 	box-shadow: 0 0 10px #7fbed5;
 }
+
+
+.content-bottom_text div {
+      max-width: 700px;
+      color: green;
+}
+
+.longtext {
+	word-break: break-all;
+	max-width: 700px;
+	color:  red;
+}
+
