@@ -1,0 +1,58 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+{% load static %}
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>Практика 4</title>
+		<!-- Кодировка страницы -->
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<div class="content">
+			<div class="content-top">
+				<div class="content-top_category">Travel</div>
+				<h1 class="content-title">
+					Donec aredsed odio dui. Morbi leo risus, porta ac consectetur a
+				</h1>
+			</div>
+			<div class="content-image">
+					<img src="{% static 'img/image.jpg'%}" alt="">
+			</div>
+			<div class="content-bottom">
+				<div class="content-bottom_text">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Eligendi odio officia aut, autem, soluta reiciendis possimus. Soluta temporibus obcaecati voluptatem atque quae, corrupti suscipit quod nisi magnam fuga est laudantium!
+					</p>
+					<p>
+						Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+					</p>
+				{% for post in posts%}
+				<div>
+					<h1>{{post.title}}</h1>
+					<p>{{post.text}}</p>
+				</div>
+				{%endfor%}
+				</div>
+				<div class="content-bottom_info">
+					<ul class="content-bottom_info_list">
+						<li>Put on this page information about your product</li>
+						<li>A detailed description of your product</li>
+						<li>Tell us about the advantages and merits</li>
+						<li><span>Associate the page with the payment system</span></li>
+					</ul>
+					<a href="#" class="content-bottom_info_link">
+						<span>Full story</span>
+					</a>
+					<div class="content-bottom_input">
+						<input type="text" class="info">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
